@@ -1,0 +1,82 @@
+*{
+    margin:0px;padding:0px;
+    list-style: none;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}
+body{
+    background: #f9f9f9;
+}
+div.zc-footer{
+    width:100%;
+}
+div.zc-footer div.zc-footer-anno{
+    width:1200px;
+    margin:20px auto;
+}
+div.zc-footer div.zc-footer-anno div{
+    text-align: left;
+}
+div.zc-footer div.zc-footer-anno div p{
+    color:#6e6e6e;
+    font-size:16px;
+}
+div.zc-footer div.zc-footer-anno div a{
+    color:#939393;
+    font-size:12px;
+}
+div.zc-footer div.zc-footer-state{
+    color:#ffffff;
+    background:url(../img/wukongzuche/footer/rectangle.png) no-repeat;
+}
+div.zc-footer div.zc-footer-state>div{
+    width:1200px;
+    margin:10px auto;
+}
+div.zc-footer div.zc-footer-state div div.d-flex a:hover{
+    color:#c82333;
+    text-decoration: none;
+}
+div.zc-footer div.zc-footer-state div.zc-footer-state-enter div.remenche a:first-child:hover{
+    color:#ffffff;
+}
+div.zc-footer div.zc-footer-state div.zc-footer-state-enter{
+    margin-top:60px;
+    margin-bottom:50px;
+}
+div.zc-footer div.zc-footer-state div.zidingyi{
+    width:1200px;
+    margin:30px auto  0px  auto;
+    height:1px;
+    background:#ffffff;
+}
+div.zc-footer div.zc-footer-state div.zc-footer-state-link {
+    margin-top:20px;
+}
+div.zc-footer div.zc-footer-state div div.d-flex a{
+    color:#ffffff;
+    display: inline-block;
+    width:90px;
+}
+div.zc-footer div.zc-footer-state div.zc-footer-state-link div.d-flex{
+    flex-wrap: wrap;
+}
+div.zc-footer div.zc-footer-state div.zc-footer-state-link div.d-flex a{
+    display: inline-block;
+    margin:10px;
+    font-size:12px;
+}
+div.zc-footer-state div.zc-footer-state-service>div{
+    margin-top:20px;
+}
+div.zc-footer-state div.zc-footer-state-service>div.col-5 ul li:not(:first-child) a{
+    color: #ffffff;
+    font-size:12px;
+}
+div.zc-footer-state div.zc-footer-state-service>div.col-5 ul li:not(:first-child) a:hover{
+    color:red;text-decoration: none;
+}
+

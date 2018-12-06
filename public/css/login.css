@@ -1,0 +1,14 @@
+*{
+    padding:0;margin:0;background: #f9f9f9;
+}
+.header{
+    width:100%;
+    background: #fff;
+    justify-content: space-around;
+    position:fixed;
+    top:0px;
+    z-index: 100;
+}
+.header div{
+    background: #fff;
+}
