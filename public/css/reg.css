@@ -18,7 +18,7 @@ iframe.login-footer{
     background: #fff;
 }
 div.login-input{
-    width:450px;height:200px;
+    width:450px;height:300px;
     background:rgba(0,0,0,0.57);
     position:absolute;
     top:150px;right:120px;
@@ -49,6 +49,9 @@ div.login-input div span{
     background:transparent;
 }
 div.upwd{
+    margin-top:15px;
+}
+.qrupwd,.email,.phone{
     margin-top:15px;
 }
 div.button{
