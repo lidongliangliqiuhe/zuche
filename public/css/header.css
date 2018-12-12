@@ -27,16 +27,19 @@ div.little-header ul.nav-left li{
 }
 div.little-header ul.nav-left li:hover{
     color:red;
+    cursor: pointer;
     transform: scale(0.99) translate(1px,1px);
 }
 div.little-header ul.nav-right li:not(:last-child):hover{
     color:red;
     transform: scale(0.99) translate(1px,1px);
+    cursor: pointer;
 }
 
 div.little-header ul.nav-right{
     float:right;
 }
+
 div.little-header ul.nav-right li.tel{
     color:red;
 }
@@ -65,6 +68,7 @@ nav .big-header .big-header-tab li{
 }
 nav .big-header .big-header-tab li:hover{
     color:red;
+    cursor: pointer;
     transform: scale(0.99) translate(1px,1px);
 }
 nav .big-header .big-header-tab li.active{

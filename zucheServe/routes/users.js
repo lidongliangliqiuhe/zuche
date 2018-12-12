@@ -5,7 +5,7 @@ const pool=require("../pool");
 router.post("/signin",(req,res)=>{
   var uname=req.body.uname;
   var upwd=req.body.upwd;
-  var sql="select * from xz_user where uname=? and upwd=?";
+  var sql="select * from zc_user where uname=? and upwd=?";
   pool.query(sql,[uname,upwd],(err,result)=>{
     if(err) console.log(err);
     if(result.length==1){
