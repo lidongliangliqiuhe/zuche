@@ -9,18 +9,19 @@ router.post("/signin",(req,res)=>{
   pool.query(sql,[uname,upwd],(err,result)=>{
     if(err) console.log(err);
     if(result.length==1){
-      req.session.uid=result[0]["uid"]
-      console.log(req.session.uid);
-      res.send({ok:1});
+	//session 中存uid
+      req.session.uid=result[0].uid
+	//返回数据 是uname
+      res.send({data:result[0].uname});
     }else{
-      res.send({ok:0,msg:"用户名或密码错误！"})
+      res.send({data:0,msg:"用户名或密码错误！"})
     }
   })
 })
 router.get("/islogin",(req,res)=>{
   if(req.session.uid===undefined)
-    res.send({ok:0});
+    res.send({data:0});
   else
-    res.send({ok:1});
+    res.send({data:1});
 })
 module.exports=router;

@@ -259,7 +259,10 @@
                     data:{uname,upwd},
                     dataType:"json",
                     success:function(res){
-                        console.log(res);
+                        if(res.data!=0){
+                            sessionStorage.setItem("uname",res.data)
+                            location.href="index.html"
+                        }
                     }
                 })
             })

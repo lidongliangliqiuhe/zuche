@@ -33,6 +33,8 @@
                 </li>
             </ul>
             <ul class="nav-right">
+                <li id="welcome"></li>
+                <li id="signout"></li>
                 <li id="reg">快速注册</li>
                 <li id="login">登录</li>
                 <li id="mywk">我的悟空</li>
@@ -454,6 +456,8 @@
         var login=document.getElementById("login");
         var mywk=document.getElementById("mywk");
         var help=document.getElementById("help");
+        var welcome=document.getElementById("welcome");
+        var signout=document.getElementById("signout");
         reg.onclick=function(){
             location.href="reg.html"
         }
@@ -462,6 +466,17 @@
         }
         help.onclick=function(){
             location.href="help.html"
+        }
+        var uname=sessionStorage.getItem("uname")
+        if(uname){
+            reg.style="display:none";
+            login.style="display:none";
+            console.log(uname)
+            welcome.innerHTML="welcome:"+uname;
+            signout.innerHTML="注销";
+            signout.onclick=function(){
+               location.href="signout.html"
+            }
         }
     </script>
 </body>
