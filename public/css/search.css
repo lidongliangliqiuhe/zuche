@@ -1,0 +1,19 @@
+body{
+    background:#f9f9f9
+}
+div.zc-select{
+    width: 1200px;
+    margin:40px auto;
+    background:#ffffff;
+}
+div.zc-select>div{
+    margin-top:10px;
+    margin-left:20px;
+}
+div.zc-select>div>div.mb-2{
+    color:#ddd;
+    font-size: 12px;
+}
+div.zc-select>div>div.border{
+    border:1px solid gray;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字这么小！去屎</title>
+    <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+    <script src="js/city.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-datetimepicker.js"></script>
+    <script src="js/bootstrap-datetimepicker.fr.js"></script>
+</head>
+<body>
+    <header id="header" class="w-100">
+        <div class="little-header">
+            <ul class="nav-left">
+                <li>
+                    <div class="header-phone">
+                        <img src="img/wukongzuche/daohang/phone.png" height="17" width="11"/> <span>手机端</span>
+                    </div>
+                    <div class="onover-phone d-none">
+                        <img src="img/wukongzuche/daohang/rent-app.png" height="179" width="156"/></div>
+                </li>
+                <li>
+                    <div class="header-weixin">
+                        <img src="img/wukongzuche/daohang/weixin.png" height="14" width="16"/><span>微信</span>
+                    </div>
+                    <div class="onover-weixin d-none">
+                        <img src="img/wukongzuche/daohang/wx-qacode.png" height="179" width="416"/></div>
+                </li>
+            </ul>
+            <ul class="nav-right">
+                <li id="welcome"></li>
+                <li id="signout"></li>
+                <li id="reg">快速注册</li>
+                <li id="login">登录</li>
+                <li id="mywk">我的悟空</li>
+                <li id="help">帮助中心</li>
+                <li class="tel">400-****-***</li>
+            </ul>
+        </div>
+    </header>
+    <nav>
+        <div class="big-header">
+            <img src="img/wukongzuche/daohang/logo.png" height="34" width="306"/>
+            <ul class="big-header-tab">
+                <li>首页</li>
+                <li class="active">租车自驾</li>
+                <li>全国网点</li>
+                <li>自驾嗨游</li>
+                <li>加盟空空</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="zc-select d-flex">
+        <div>
+            <div class="mb-2">取车城市</div>
+            <div class="border">
+                <select id="province"></select>
+                <select id="city"></select>
+            </div>
+        </div>
+        <div>
+            <div class="mb-2">取车网点</div>
+            <div class="border">
+                <select></select>
+                <select></select>
+            </div>
+        </div>
+        <div class="row">
+            <input size="16" type="text" value="2012-06-15 14:45" readonly class="form_datetime">
+        </div>
+    </div>
+    <div id="mygaojia">60</div>
+
+
+    <script type="text/javascript">
+        $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
+    </script>
+
+
+    <script>
+    (function(){
+        var pHtmlStr = '';
+        for(var name in pc){
+            pHtmlStr = pHtmlStr + '<option>'+name+'</option>';
+        }
+        $("#province").html(pHtmlStr);
+        $("#province").change(function(){
+            var pname = $("#province option:selected").text();
+            var pHtmlStr = '';
+            var cityList = pc[pname];
+            for(var index in cityList){
+                pHtmlStr = pHtmlStr + '<option>'+cityList[index]+'</option>';
+            }
+            $("#city").html(pHtmlStr);
+        });
+        $("#province").change();
+    })();
+</script>
+    <script>
+        var gaojia=document.getElementById("mygaojia");
+        var t=setInterval(function(){
+            parseInt(gaojia.innerHTML)
+            gaojia.innerHTML-=1;
+        },1000)
+        gaojia.onclick9
+    </script>
+</body>
+</html>
