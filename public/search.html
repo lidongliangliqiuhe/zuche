@@ -15,10 +15,17 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/bootstrap-datetimepicker.js"></script>
     <script src="js/bootstrap-datetimepicker.fr.js"></script>
+
 </head>
 <body>
     <header id="header" class="w-100">
     <div class="little-header">
+        <div class="xiaoshi">
+            <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/rent-app.png" alt="">
+        </div>
+        <div class="xiaoshi">
+            <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/wx-qacode.png" alt="">
+        </div>
         <ul class="nav-left">
             <li>
                 <div class="header-phone">
@@ -50,8 +57,8 @@
     <div class="big-header">
         <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/logo.png" height="34" width="306"/>
         <ul class="big-header-tab">
-            <li class="active">首页</li>
-            <li>租车自驾</li>
+            <li>首页</li>
+            <li class="active">租车自驾</li>
             <li>全国网点</li>
             <li>自驾嗨游</li>
             <li>加盟空空</li>
@@ -445,18 +452,6 @@
         $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
     </script>
     <script src="js/search.js"></script>
-    <script>
-        (function(){
-            var select=document.querySelector(".zc-select")
-            window.onscroll=function(){
-                var scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
-                if(scrollTop>=120 && scrollTop<=728){
-                    select.setAttribute("style","position:fixed;top:-55px;left:244px;z-index:10;")
-                }else{
-                    select.setAttribute("style","")
-                }
-            }
-        })()
-    </script>
+    <script src="js/header.js"></script>
 </body>
 </html>

@@ -14,4 +14,13 @@
         $("#city").html(pHtmlStr);
     });
     $("#province").change();
+    var select=document.querySelector(".zc-select")
+    window.onscroll=function(){
+        var scrollTop=document.body.scrollTop || document.documentElement.scrollTop;
+        if(scrollTop>=120 && scrollTop<=728){
+            select.setAttribute("style","position:fixed;top:-55px;left:244px;z-index:10;")
+        }else{
+            select.setAttribute("style","")
+        }
+    }
 })();

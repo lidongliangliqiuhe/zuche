@@ -12,10 +12,17 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
 
+
 </head>
 <body>
     <header id="header" class="w-100">
         <div class="little-header">
+            <div class="xiaoshi">
+                <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/rent-app.png" alt="">
+            </div>
+            <div class="xiaoshi">
+                <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/wx-qacode.png" alt="">
+            </div>
             <ul class="nav-left">
                 <li>
                     <div class="header-phone">
@@ -451,34 +458,6 @@
             </div>
         </div>
     </div>
-    <script>
-        (function(){
-            var reg=document.getElementById("reg");
-            var login=document.getElementById("login");
-            var mywk=document.getElementById("mywk");
-            var help=document.getElementById("help");
-            var welcome=document.getElementById("welcome");
-            var signout=document.getElementById("signout");
-            reg.onclick=function(){
-                location.href="reg.html"
-            }
-            login.onclick=function(){
-                location.href="login.html"
-            }
-            help.onclick=function(){
-                location.href="help.html"
-            }
-            var uname=sessionStorage.getItem("uname")
-            if(uname){
-                reg.style="display:none";
-                login.style="display:none";
-                welcome.innerHTML=uname;
-                signout.innerHTML="注销";
-                signout.onclick=function(){
-                    location.href="signout.html"
-                }
-            }
-        })()
-    </script>
+    <script src="js/header.js"></script>
 </body>
 </html>

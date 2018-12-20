@@ -21,6 +21,23 @@
 div.little-header ul.nav-left{
     display:inline-block;
 }
+div.little-header div.xiaoshi{
+    display: none;
+}
+div.little-header div.xianshi1{
+    z-index: 10;
+    width: 160px;
+    height: 185px;
+    position:absolute;
+    top:36px;left:242px;
+}
+div.little-header div.xianshi2{
+    z-index: 11;
+    width: 160px;
+    height: 185px;
+    position:absolute;
+    top:36px;left:312px;
+}
 div.little-header ul.nav-left li{
     width:70px;
     float:left;
