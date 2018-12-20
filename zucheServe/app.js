@@ -10,7 +10,7 @@ const users=require("./routes/users");
 const products=require("./routes/products");
 
 var app = express();
-var server = app.listen(3000);
+var server = app.listen(4567);
 //使用body-parser中间件
 app.use(bodyParser.urlencoded({extended:false}));
 //托管静态资源到public目录下

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/search.css">
     <link rel="stylesheet" href="css/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="css/footer.css">
     <script src="js/city.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
@@ -17,99 +18,432 @@
 </head>
 <body>
     <header id="header" class="w-100">
-        <div class="little-header">
-            <ul class="nav-left">
-                <li>
-                    <div class="header-phone">
-                        <img src="img/wukongzuche/daohang/phone.png" height="17" width="11"/> <span>手机端</span>
-                    </div>
-                    <div class="onover-phone d-none">
-                        <img src="img/wukongzuche/daohang/rent-app.png" height="179" width="156"/></div>
-                </li>
-                <li>
-                    <div class="header-weixin">
-                        <img src="img/wukongzuche/daohang/weixin.png" height="14" width="16"/><span>微信</span>
-                    </div>
-                    <div class="onover-weixin d-none">
-                        <img src="img/wukongzuche/daohang/wx-qacode.png" height="179" width="416"/></div>
-                </li>
-            </ul>
-            <ul class="nav-right">
-                <li id="welcome"></li>
-                <li id="signout"></li>
-                <li id="reg">快速注册</li>
-                <li id="login">登录</li>
-                <li id="mywk">我的悟空</li>
-                <li id="help">帮助中心</li>
-                <li class="tel">400-****-***</li>
-            </ul>
-        </div>
-    </header>
+    <div class="little-header">
+        <ul class="nav-left">
+            <li>
+                <div class="header-phone">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/phone.png" height="17" width="11"/> <span>手机端</span>
+                </div>
+                <div class="onover-phone d-none">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/rent-app.png" height="179" width="156"/></div>
+            </li>
+            <li>
+                <div class="header-weixin">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/weixin.png" height="14" width="16"/><span>微信</span>
+                </div>
+                <div class="onover-weixin d-none">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/wx-qacode.png" height="179" width="416"/></div>
+            </li>
+        </ul>
+        <ul class="nav-right">
+            <li id="welcome"></li>
+            <li id="signout"></li>
+            <li id="reg">快速注册</li>
+            <li id="login">登录</li>
+            <li id="mywk">我的悟空</li>
+            <li id="help">帮助中心</li>
+            <li class="tel">400-****-***</li>
+        </ul>
+    </div>
+</header>
     <nav>
-        <div class="big-header">
-            <img src="img/wukongzuche/daohang/logo.png" height="34" width="306"/>
-            <ul class="big-header-tab">
-                <li>首页</li>
-                <li class="active">租车自驾</li>
-                <li>全国网点</li>
-                <li>自驾嗨游</li>
-                <li>加盟空空</li>
-            </ul>
-        </div>
-    </nav>
-    <div class="zc-select d-flex">
-        <div>
+    <div class="big-header">
+        <img src="http://127.0.0.1:4567/img/wukongzuche/daohang/logo.png" height="34" width="306"/>
+        <ul class="big-header-tab">
+            <li class="active">首页</li>
+            <li>租车自驾</li>
+            <li>全国网点</li>
+            <li>自驾嗨游</li>
+            <li>加盟空空</li>
+        </ul>
+
+    </div>
+</nav>
+    <div class="zc-select row">
+        <div class="col-sm-3">
             <div class="mb-2">取车城市</div>
             <div class="border">
                 <select id="province"></select>
                 <select id="city"></select>
             </div>
         </div>
-        <div>
-            <div class="mb-2">取车网点</div>
+        <div class="col-sm-3">
+            <div class="mb-2">取车时间</div>
             <div class="border">
-                <select></select>
-                <select></select>
+                <input size="16" type="text" value="2012-06-15 14:45" readonly class="form_datetime">
             </div>
         </div>
-        <div class="row">
-            <input size="16" type="text" value="2012-06-15 14:45" readonly class="form_datetime">
+        <div class="col-sm-3">
+            <div class="mb-2">换车时间</div>
+            <div class="border">
+                <input size="16" type="text" value="2012-06-15 14:45" readonly class="form_datetime">
+            </div>
+        </div>
+        <div class="col-sm-3">
+            <div class="mb-2">租期
+                <span>2天</span>
+            </div>
+            <div class="border">
+                <input type="button" value="立即租车" class="ljzc">
+            </div>
         </div>
     </div>
-    <div id="mygaojia">60</div>
-
-
+    <div class="search-body row">
+        <div class="search-aside col-md-4">
+            <div>
+                <p>类型</p>
+            </div>
+            <div class="select-icon">
+                <div>
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/search/buxian.jpg" height="23" width="68"/>
+                    <p>不限</p>
+                </div>
+                <div>
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/search/jingji.jpg" height="23" width="68"/>
+                    <p>经济型</p>
+                </div>
+                <div>
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/search/shushi.jpg" height="23" width="68"/>
+                    <p>舒适型</p>
+                </div>
+                <div>
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/search/shangwu.jpg" height="23" width="68"/>
+                    <p>MPV</p>
+                </div>
+                <div>
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/search/haohua.jpg" height="22" width="68"/>
+                    <p>豪华型</p>
+                </div>
+                <div>
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/search/suv.jpg" height="23" width="68"/>
+                    <p>SUV</p>
+                </div>
+            </div>
+            <div class="fenge"></div>
+            <div>
+                <p>常见品牌</p>
+            </div>
+            <div class="select-name">
+                <div>全部</div>
+                <div>大众</div>
+                <div>奥迪</div>
+                <div>现代</div>
+                <div>起亚</div>
+                <div>标志</div>
+                <div>雪铁龙</div>
+                <div>别克</div>
+                <div>雪佛兰</div>
+                <div>福特</div>
+                <div>马自达</div>
+                <div>丰田</div>
+                <div>本田</div>
+                <div>日产</div>
+                <div>雷克萨斯</div>
+                <div>江淮</div>
+                <div>北京汽车</div>
+                <div>比亚及</div>
+                <div>奔驰</div>
+                <div>宝马</div>
+            </div>
+        </div>
+        <div class="search-result col-md-8">
+            <div class="result-item row">
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/carslist/aodi1.jpg" alt="" width="180">
+                </div>
+                <div class="col-md-4 text-center">
+                    <p class="p1">
+                        <span>别克</span><span>GL8</span>
+                    </p>
+                    <p class="p2">
+                        MPV |2.4L |自动 |可载7人
+                    </p>
+                </div>
+                <div class="col-md-3 price">
+                    <p class="p3">
+                        <span>¥508</span><span>/日均</span>
+                    </p>
+                </div>
+                <div class="col-md-2">
+                    <button>预定</button>
+                </div>
+            </div>
+            <div class="result-item row">
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/carslist/aodi1.jpg" alt="" width="180">
+                </div>
+                <div class="col-md-3">
+                    <p class="p1">
+                        <span>别克</span><span>GL8</span>
+                    </p>
+                    <p class="p2">
+                        MPV |2.4L |自动 |可载7人
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="p3">
+                        <span>¥508</span><span>/日均</span>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button>预定</button>
+                </div>
+            </div>
+            <div class="result-item row">
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/carslist/aodi1.jpg" alt="" width="180">
+                </div>
+                <div class="col-md-3">
+                    <p class="p1">
+                        <span>别克</span><span>GL8</span>
+                    </p>
+                    <p class="p2">
+                        MPV |2.4L |自动 |可载7人
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="p3">
+                        <span>¥508</span><span>/日均</span>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button>预定</button>
+                </div>
+            </div>
+            <div class="result-item row">
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/carslist/aodi1.jpg" alt="" width="180">
+                </div>
+                <div class="col-md-3">
+                    <p class="p1">
+                        <span>别克</span><span>GL8</span>
+                    </p>
+                    <p class="p2">
+                        MPV |2.4L |自动 |可载7人
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="p3">
+                        <span>¥508</span><span>/日均</span>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button>预定</button>
+                </div>
+            </div>
+            <div class="result-item row">
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/carslist/aodi1.jpg" alt="" width="180">
+                </div>
+                <div class="col-md-3">
+                    <p class="p1">
+                        <span>别克</span><span>GL8</span>
+                    </p>
+                    <p class="p2">
+                        MPV |2.4L |自动 |可载7人
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="p3">
+                        <span>¥508</span><span>/日均</span>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button>预定</button>
+                </div>
+            </div>
+            <div class="result-item row">
+                <div class="col-md-3">
+                    <img src="http://127.0.0.1:4567/img/wukongzuche/carslist/aodi1.jpg" alt="" width="180">
+                </div>
+                <div class="col-md-3">
+                    <p class="p1">
+                        <span>别克</span><span>GL8</span>
+                    </p>
+                    <p class="p2">
+                        MPV |2.4L |自动 |可载7人
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <p class="p3">
+                        <span>¥508</span><span>/日均</span>
+                    </p>
+                </div>
+                <div class="col-md-3">
+                    <button>预定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="zc-footer">
+        <div class="zc-footer-anno d-flex justify-content-between">
+            <div>
+                <p class="mb-1">关于服务</p>
+                <a href="javascript:;">服务时间</a><br>
+                <a href="javascript:;">短租及可选服务</a>
+            </div>
+            <div>
+                <p class="mb-1">预定指南</p>
+                <a href="javascript:;">预定规则</a><br>
+                <a href="javascript:;">退改规则</a>
+            </div>
+            <div>
+                <p class="mb-1">取还车指南</p>
+                <a href="javascript:;">取车规则</a><br>
+                <a href="javascript:;">还车规则</a>
+            </div>
+            <div>
+                <p class="mb-1">保险及事故处理说明</p>
+                <a href="javascript:;">保险责任</a><br>
+                <a href="javascript:;">事故处理说明</a>
+                <a href="javascript:;">救援及别用车服务</a>
+            </div>
+            <div>
+                <p class="mb-1">费用标准</p>
+                <a href="javascript:;">标准服务收费</a><br>
+                <a href="javascript:;">可选服务价格</a>
+                <a href="javascript:;">其他服务说明</a>
+            </div>
+        </div>
+        <div></div>
+        <div class="zc-footer-state">
+            <table></table>
+            <div class="zc-footer-state-enter">
+                <p>热门租车城市入口</p>
+                <div class="d-flex remenche">
+                    <a href="#">热门</a>
+                    <a href="#">A</a>
+                    <a href="#">B</a>
+                    <a href="#">C</a>
+                    <a href="#">D</a>
+                    <a href="#">E</a>
+                    <a href="#">F</a>
+                    <a href="#">G</a>
+                    <a href="#">H</a>
+                    <a href="#">I</a>
+                    <a href="#">J</a>
+                    <a href="#">K</a>
+                    <a href="#">L</a>
+                    <a href="#">M</a>
+                    <a href="#">N</a>
+                    <a href="#">O</a>
+                    <a href="#">P</a>
+                    <a href="#">Q</a>
+                    <a href="#">R</a>
+                    <a href="#">S</a>
+                    <a href="#">T</a>
+                    <a href="#">U</a>
+                    <a href="#">V</a>
+                    <a href="#">W</a>
+                    <a href="#">X</a>
+                    <a href="#">Y</a>
+                    <a href="#">Z</a>
+                </div>
+                <div class="d-flex">
+                    <a href="#">北京租车</a>
+                    <a href="#">成都租车</a>
+                    <a href="#">重庆租车</a>
+                    <a href="#">广州租车</a>
+                    <a href="#">昆明租车</a>
+                    <a href="#">深圳租车</a>
+                    <a href="#">上海租车</a>
+                    <a href="#">武汉租车</a>
+                    <a href="#">西安租车</a>
+                </div>
+                <div class="zidingyi"></div>
+            </div>
+            <div class="zc-footer-state-link">
+                <table></table>
+                <p>友情链接</p>
+                <div class="d-flex youqing">
+                    <a href="#">悟空租车</a>
+                    <a href="#">北京旅游</a>
+                    <a href="#">赶集网</a>
+                    <a href="#">徐州装修</a>
+                    <a href="#">电动汽车排名</a>
+                    <a href="#">北京个人二手车</a>
+                    <a href="#">汽车美容店加盟</a>
+                    <a href="#">欣欣签证</a>
+                    <a href="#">汽车票网上购票</a>
+                    <a href="#">御途网车品</a>
+                    <a href="#">一猫汽车图片</a>
+                    <a href="#">庐山旅游</a>
+                    <a href="#">大理发地产</a>
+                    <a href="#">天津租房</a>
+                    <a href="#">自驾游路线</a>
+                    <a href="#">车人网</a>
+                    <a href="#">南京旅行社</a>
+                    <a href="#">宝马X7</a>
+                    <a href="#">北京租车公司</a>
+                    <a href="#">事故车交易网</a>
+                    <a href="#">江西旅行社</a>
+                    <a href="#">贵阳租车</a>
+                    <a href="#">滨州二手车</a>
+                </div>
+                <div class="zidingyi"></div>
+            </div>
+            <div class="zc-footer-state-service row">
+                <div class="col-5 row">
+                    <ul class="col-4">
+                        <li><h6>我们的服务</h6></li>
+                        <li><a href="#">短租介绍</a></li>
+                        <li><a href="#">加盟服务</a></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class="col-4">
+                        <li><h6>帮助中心</h6></li>
+                        <li><a href="#">保险条款</a></li>
+                        <li><a href="#">人工服务</a></li>
+                        <li><a href="#">常见问题</a></li>
+                        <li><a href="#">用户服务协议</a></li>
+                    </ul>
+                    <ul class="col-4">
+                        <li><h6>关于我们</h6></li>
+                        <li><a href="#">媒体报道</a></li>
+                        <li><a href="#">悟空故事</a></li>
+                        <li><a href="#">联系我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="col-7 row text-center">
+                    <div class="col-3">
+                        <h6>小程序</h6>
+                        <div>
+                            <img src="http://127.0.0.1:4567/img/wukongzuche/footer/xiaochengxu.png" height="104" width="104"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h6>服务号</h6>
+                        <div>
+                            <img src="http://127.0.0.1:4567/img/wukongzuche/footer/xiaochengxu.png" height="104" width="104"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h6>订阅号</h6>
+                        <div>
+                            <img src="http://127.0.0.1:4567/img/wukongzuche/footer/xiaochengxu.png" height="104" width="104"/>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <h6>app下载</h6>
+                        <div>
+                            <img src="http://127.0.0.1:4567/img/wukongzuche/footer/xiaochengxu.png" height="104" width="104"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="zidingyi"></div>
+            </div>
+            <div class="zc-footer-state-power text-center">
+                <p>脚印兄弟（北京）信息科技有限责任公司</p>
+                <p>地址：北京市朝阳区将台乡酒仙桥路甲16号九层9069 电话：400-0515-507</p>
+                <p>京公网安备 11010102002013号  京ICP备14057852号  京ICP证160460号</p>
+            </div>
+        </div>
+    </div>
     <script type="text/javascript">
         $(".form_datetime").datetimepicker({format: 'yyyy-mm-dd hh:ii'});
     </script>
-
-
-    <script>
-    (function(){
-        var pHtmlStr = '';
-        for(var name in pc){
-            pHtmlStr = pHtmlStr + '<option>'+name+'</option>';
-        }
-        $("#province").html(pHtmlStr);
-        $("#province").change(function(){
-            var pname = $("#province option:selected").text();
-            var pHtmlStr = '';
-            var cityList = pc[pname];
-            for(var index in cityList){
-                pHtmlStr = pHtmlStr + '<option>'+cityList[index]+'</option>';
-            }
-            $("#city").html(pHtmlStr);
-        });
-        $("#province").change();
-    })();
-</script>
-    <script>
-        var gaojia=document.getElementById("mygaojia");
-        var t=setInterval(function(){
-            parseInt(gaojia.innerHTML)
-            gaojia.innerHTML-=1;
-        },1000)
-        gaojia.onclick9
-    </script>
+    <script src="js/search.js"></script>
 </body>
 </html>
